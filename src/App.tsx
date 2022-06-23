@@ -1,22 +1,10 @@
-import { gql, useQuery } from "@apollo/client"
+import { Event } from "./pages/Event"
 
-const GET_LESSONS_QUERY = gql`
-  query {
-    lessons {
-      id
-      title
-    }
-  }
-`
-
-function App() {
-  const { data } = useQuery(GET_LESSONS_QUERY)
-
-  console.log(data)
-
+export function App() {
   return (
-    <h1 className="text-5xl font-bold text-violet-500">Hello World</h1>
+    <div>
+      <Event/>
+    </div>
   )
 }
 
-export default App
